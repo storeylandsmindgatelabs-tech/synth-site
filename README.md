@@ -148,7 +148,7 @@ If you believe imagination should build worlds — you belong here.
 ## 📩 Contact  
 If you'd like to contribute, invest, or join the project:
 
-**Email:** *coming soon*  
+**Email:**storeylandsmindgatelabs@gmail.com  
 **Founder:** *Travis Hilton Storey*  
 **Project:** *Storeyland Mindgate Labs*
 
