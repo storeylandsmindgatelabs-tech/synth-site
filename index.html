@@ -21,92 +21,77 @@
         }
 
         h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+            font-size: 2.4rem;
+            margin-bottom: 8px;
         }
 
         h2 {
-            margin-top: 40px;
-            font-size: 1.4rem;
-            opacity: 0.9;
-        }
-
-        .btn {
-            background: #5a189a;
-            border: none;
-            padding: 15px 25px;
-            border-radius: 10px;
+            font-weight: 300;
             font-size: 1.1rem;
-            color: white;
-            margin-top: 20px;
-            cursor: pointer;
+            opacity: 0.8;
+            margin-top: -8px;
         }
 
-        .btn:hover {
-            background: #7b2cbf;
-        }
-
-        #scene-output {
+        .hero {
             margin-top: 40px;
             padding: 20px;
-            border: 2px dashed #9d4edd;
-            min-height: 200px;
-            width: 90%;
+        }
+
+        .hero img {
+            width: 85%;
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 15px;
-            font-size: 1.2rem;
+            border-radius: 12px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.15);
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .section h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding: 20px;
+            opacity: 0.6;
+            font-size: 0.8rem;
         }
     </style>
-
-    <!-- COPYRIGHT -->
-    <meta name="copyright" content="© 2025 Travis H. Storey — All Rights Reserved">
 </head>
 
 <body>
 
 <header>
-    <h1>Synth — AI Scene Builder Prototype</h1>
-    <p>Speak a world into existence.</p>
+    <h1>Synth Prototype</h1>
+    <h2>Storeylands Mindgate Labs</h2>
 </header>
 
-<h2>Voice Input</h2>
-<button class="btn" onclick="startVoice()">🎤 Start Speaking</button>
+<div class="hero">
+    <img src="hero-image.png" alt="Synth visual">
+    <p>Next-gen AI world-building. Instant scenes. Infinite scale.</p>
+</div>
 
-<h2>Generated Scene Preview</h2>
-<div id="scene-output">Your generated scene will appear here...</div>
+<div class="section">
+    <h3>Voice-Driven Scene Creation</h3>
+    <p>Speak a world into existence. Synth builds it.</p>
+</div>
 
-<script>
-    function startVoice() {
-        const output = document.getElementById("scene-output");
+<div class="section">
+    <h3>Depth. Scale. Realism.</h3>
+    <p>The foundation of the entire platform.</p>
+</div>
 
-        // Use browser speech recognition (works only on supported devices)
-        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+<div class="section">
+    <h3>Prototype 01</h3>
+    <p>This is an early visual preview. Full AR/VR engine in development.</p>
+</div>
 
-        if (!SpeechRecognition) {
-            output.innerHTML = "Speech recognition not supported on this device.";
-            return;
-        }
-
-        const recognition = new SpeechRecognition();
-        recognition.lang = "en-US";
-
-        output.innerHTML = "Listening...";
-
-        recognition.onresult = function(event) {
-            const transcript = event.results[0][0].transcript;
-            output.innerHTML = "<strong>You said:</strong> " + transcript + "<br><br>" +
-                "✨ <em>Prototype placeholder:</em> A generated scene would appear here.";
-        };
-
-        recognition.onerror = function(event) {
-            output.innerHTML = "Error: " + event.error;
-        };
-
-        recognition.start();
-    }
-</script>
+<div class="footer">
+    © 2025 Travis H. Storey — All Rights Reserved.
+</div>
 
 </body>
 </html>
