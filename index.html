@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synth Prototype</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 40px 20px;
+            background: linear-gradient(90deg, #240046, #5a189a, #9d4edd);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background: #5a189a;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            color: white;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #7b2cbf;
+        }
+
+        #scene-output {
+            margin-top: 40px;
+            padding: 20px;
+            border: 2px dashed #9d4edd;
+            min-height: 200px;
+            width: 90%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+            font-size: 1.2rem;
+        }
+    </style>
+
+    <!-- COPYRIGHT -->
+    <meta name="copyright" content="© 2025 Travis H. Storey — All Rights Reserved">
+</head>
+
+<body>
+
+<header>
+    <h1>Synth — AI Scene Builder Prototype</h1>
+    <p>Speak a world into existence.</p>
+</header>
+
+<h2>Voice Input</h2>
+<button class="btn" onclick="startVoice()">🎤 Start Speaking</button>
+
+<h2>Generated Scene Preview</h2>
+<div id="scene-output">Your generated scene will appear here...</div>
+
+<script>
+    function startVoice() {
+        const output = document.getElementById("scene-output");
+
+        // Use browser speech recognition (works only on supported devices)
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+        if (!SpeechRecognition) {
+            output.innerHTML = "Speech recognition not supported on this device.";
+            return;
+        }
+
+        const recognition = new SpeechRecognition();
+        recognition.lang = "en-US";
+
+        output.innerHTML = "Listening...";
+
+        recognition.onresult = function(event) {
+            const transcript = event.results[0][0].transcript;
+            output.innerHTML = "<strong>You said:</strong> " + transcript + "<br><br>" +
+                "✨ <em>Prototype placeholder:</em> A generated scene would appear here.";
+        };
+
+        recognition.onerror = function(event) {
+            output.innerHTML = "Error: " + event.error;
+        };
+
+        recognition.start();
+    }
+</script>
+
+</body>
+</html>
