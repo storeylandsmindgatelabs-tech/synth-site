@@ -1,97 +1,126 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synth Prototype</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synth — Storeylands Mindgate Labs</title>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #0d0d0d;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
             color: white;
-            text-align: center;
         }
 
         header {
+            background: linear-gradient(90deg, #0af, #80f);
             padding: 40px 20px;
-            background: linear-gradient(90deg, #240046, #5a189a, #9d4edd);
+            text-align: center;
         }
 
-        h1 {
-            font-size: 2.4rem;
-            margin-bottom: 8px;
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
         }
 
-        h2 {
-            font-weight: 300;
-            font-size: 1.1rem;
-            opacity: 0.8;
-            margin-top: -8px;
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
         }
 
-        .hero {
-            margin-top: 40px;
-            padding: 20px;
+        section {
+            padding: 60px 30px;
+            max-width: 1200px;
+            margin: auto;
         }
 
-        .hero img {
-            width: 85%;
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .center-image {
+            display: block;
+            margin: 30px auto;
+            width: 90%;
             max-width: 600px;
             border-radius: 12px;
-            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(0, 150, 255, 0.5);
         }
 
-        .section {
-            padding: 40px 20px;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
 
-        .section h3 {
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-        }
-
-        .footer {
-            margin-top: 60px;
+        .card {
+            background: #111;
             padding: 20px;
-            opacity: 0.6;
-            font-size: 0.8rem;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #111;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: #aaa;
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Synth Prototype</h1>
-    <h2>Storeylands Mindgate Labs</h2>
-</header>
+    <header>
+        <h1>Synth</h1>
+        <p>The AI Reality Engine by Storeylands Mindgate Labs</p>
+    </header>
 
-<div class="hero">
-    <img src="hero-image.png" alt="Synth visual">
-    <p>Next-gen AI world-building. Instant scenes. Infinite scale.</p>
-</div>
+    <section>
+        <h2 class="section-title">The Vision</h2>
+        <p style="text-align:center; max-width:700px; margin:auto;">
+            Synth builds worlds, stories, scenes, and experiences instantly. 
+            Speak — and reality unfolds. This is world-building without friction.
+        </p>
+        <img src="YOUR_IMAGE_C_HERE" class="center-image" alt="Synth banner" />
+    </section>
 
-<div class="section">
-    <h3>Voice-Driven Scene Creation</h3>
-    <p>Speak a world into existence. Synth builds it.</p>
-</div>
+    <section>
+        <h2 class="section-title">Core Features</h2>
 
-<div class="section">
-    <h3>Depth. Scale. Realism.</h3>
-    <p>The foundation of the entire platform.</p>
-</div>
+        <div class="grid">
+            <div class="card">
+                <h3>Instant Scene Builder</h3>
+                <p>Describe a moment and Synth renders it in seconds.</p>
+            </div>
 
-<div class="section">
-    <h3>Prototype 01</h3>
-    <p>This is an early visual preview. Full AR/VR engine in development.</p>
-</div>
+            <div class="card">
+                <h3>Immersive Scale</h3>
+                <p>Worlds with depth, physics, and presence—built on demand.</p>
+            </div>
 
-<div class="footer">
-    © 2025 Travis H. Storey — All Rights Reserved.
-</div>
+            <div class="card">
+                <h3>Creative Intelligence</h3>
+                <p>Your voice becomes the architect of fully dynamic realities.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Powered by Vision & AI</h2>
+        <img src="YOUR_IMAGE_D_HERE" class="center-image" alt="Synth technology" />
+    </section>
+
+    <footer>
+        Storeylands Mindgate Labs — © 2025  
+    </footer>
 
 </body>
 </html>
