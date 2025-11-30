@@ -1,0 +1,10 @@
+
+body { margin:0; font-family:Arial; background:#03040a; color:white; }
+.nav { display:flex; justify-content:space-between; padding:20px; position:sticky; top:0; background:#03040acc; backdrop-filter:blur(10px); }
+.logo { height:48px; }
+.hero { padding:120px 20px; text-align:center; background:linear-gradient(to bottom, #071224, #03040a); }
+.cta { padding:12px 20px; background:#00baff; color:black; font-weight:bold; border:none; border-radius:8px; }
+.panel { padding:60px 20px; text-align:center; }
+.panel-img { max-width:600px; display:block; margin:auto; opacity:0.8; }
+.legal-box { background:#111827; padding:20px; border-radius:10px; white-space:pre-wrap; }
+footer { padding:20px; text-align:center; color:#9ea0a6; border-top:1px solid #1a1f2e; }
